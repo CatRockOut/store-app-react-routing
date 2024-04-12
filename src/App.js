@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/store-app-react-routing">
             <div className="App">
                 <Routes>
                     <Route path="/" element={<Header />}>

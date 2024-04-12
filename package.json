@@ -1,6 +1,7 @@
 {
   "name": "store-app-react-routing",
   "version": "0.1.0",
+  "homepage": "https://catrockout.github.io/store-app-react-routing",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
