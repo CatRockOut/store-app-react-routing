@@ -1,0 +1,22 @@
+.notFound {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 960px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+.notFound h1 {
+    color: #FF5620;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: calc(36 / 19);
+    margin-bottom: 15px;
+}

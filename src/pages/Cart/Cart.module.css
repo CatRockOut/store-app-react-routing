@@ -1,0 +1,265 @@
+.cart {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+.cart h1 {
+    color: #243573;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: calc(36 / 19);
+    margin-bottom: 15px;
+}
+
+.productCart {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.productCart img {
+    width: 130px;
+    height: 130px;
+    margin-right: 8px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.productCartInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.infoAndDeleteBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoAndDeleteBtn span {
+    max-width: 700px;
+    width: 100%;
+    font-size: 16px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+
+.deleteBtn {
+    background-color: #00AE1C;
+    border: 1px solid #00AE1C;
+    color: #fff;
+    width: 81px;
+    height: 36px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.deleteBtn::before {
+    content: '';
+    background-image: url('../../assets/img/trash.svg');
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-right: 5px;
+}
+
+.deleteBtn:hover {
+    border-color: #5CE171;
+}
+
+.deleteBtn:active {
+    background-color: #0CD52B;
+}
+
+.counterContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plusAndMinus {
+    display: flex;
+    max-width: 140px;
+}
+
+.minus,
+.plus {
+    width: 36px;
+    height: 36px;
+    background-color: #00AE1C;
+    border: 1px solid #00AE1C;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.minus::before {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    bottom: 50%;
+    transform: translate(85%, 0%);
+}
+
+.plus::before,
+.plus::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    bottom: 50%;
+}
+
+.plus::before {
+    transform: translate(85%, 0%) rotate(0deg);
+}
+
+.plus::after {
+    transform: translate(85%, 0%) rotate(90deg);
+}
+
+.minus:hover,
+.plus:hover {
+    border-color: #5CE171;
+}
+
+.minus:active,
+.plus:active {
+    background-color: #0CD52B;
+}
+
+.plusAndMinus span {
+    color: #0C0C0C;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price span {
+    color: #0C0C0C;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(16 / 20);
+    margin-right: 20px;
+}
+
+.price h2 {
+    color: #0C0C0C;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: calc(24 / 20);
+}
+
+.totalProducts {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.totalInfo,
+.totalSum {
+    display: flex;
+    flex-direction: column;
+    color: #243573;
+    font-size: 20px;
+    line-height: calc(20 / 24);
+}
+
+.totalInfo {
+    margin-right: 40px;
+}
+
+.totalInfo span {
+    margin-bottom: 15px;
+}
+
+.totalSum span {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#nextStepBtn,
+#disabledButton {
+    display: block;
+    width: 150px;
+    background-color: #00AE1C;
+    border: 1px solid #00AE1C;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25), 0 4px 4px 0 rgba(0, 0, 0, .25);
+    border-radius: 10px;
+    color: #fff;
+    padding: 9px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#nextStepBtn:hover {
+    border-color: #5CE171;
+}
+
+#nextStepBtn:active {
+    background-color: #0CD52B;
+}
+
+#nextStepBtn span,
+#disabledButton span {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: calc(15 / 20);
+}
+
+#disabledButton {
+    background-color: #187727;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, .05);
+    cursor: not-allowed;
+}
+
+#disabledButton span {
+    color: #B9B9B9;
+}
+
+.noItemsMessage {
+    color: #FF5620;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+@media (max-width: 480px) {
+    .counterContainer {
+        flex-direction: column;
+    }
+
+    .deleteBtn {
+        margin-bottom: 5px;
+    }
+
+    .infoAndDeleteBtn {
+        flex-wrap: wrap;
+    }
+
+    .infoAndDeleteBtn span {
+        font-size: 14px;
+        padding-right: 10px;
+    }
+}
